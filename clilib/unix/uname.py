@@ -59,8 +59,11 @@ def uname(params=None):
 	"""
 	import shlex
 	
-	for param in shlex.split(params):
-		if param in {'-a', '--all'}:
-			print "uname -a"
-		else:
-			print "Linux"
+	if None != params:
+		for param in shlex.split(params):
+			if param in {'-a', '--all'}:
+				return "Linux bitminer 3.16.0-4-amd64 #1 SMP Debian 3.16.7-ckt9-3~deb8u1 (2015-04-24) x86_64 GNU/Linux"
+			else:
+				return "Linux"
+	else:
+		return "Linux"

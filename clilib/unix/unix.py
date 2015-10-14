@@ -1,8 +1,9 @@
 from uname import *
+from echo import *
 
 def man(command=None):
-	if None == command:
-		print "Error!"
+	if None == command or '' == command.strip():
+		return "What manual page do you want?"
 	else:
-		print eval(command).__doc__
+		return eval(command).__doc__
 	

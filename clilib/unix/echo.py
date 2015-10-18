@@ -69,13 +69,11 @@ SEE ALSO
 
 GNU coreutils 8.23                                                           March 2015                                                                     ECHO(1)
 	"""
-	import shlex
 	
 	output = ""
 	escape = False
 	
 	if None != params:
-		#for param in shlex.split(params):
          for param in params:
 			if param in {'-e'}:
 				escape = True

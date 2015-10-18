@@ -85,4 +85,4 @@ SEE ALSO
 GNU coreutils 8.23                                                           March 2015                                                                       RM(1)
 	"""
 
-	return ""
+	return ''

@@ -23,6 +23,5 @@ setup(
         "Topic :: Unix Windows Honeypots :: Libraries :: Python Modules",
         "Programming Language :: Python :: 2.7",
         "License :: GPLv2 License",
-    ],
-    install_requires = ['']
+    ]
 )

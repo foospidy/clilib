@@ -70,7 +70,7 @@ SEE ALSO
 GNU coreutils 8.23                                                           March 2015                                                                     ECHO(1)
 	"""
 	
-	output = ""
+	output = ''
 	escape = False
 	
 	if None != params:

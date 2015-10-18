@@ -7,10 +7,8 @@ UNIX    = {'posix', 'mac'}
 WINDOWS = {'nt'}
 
 if os.name in UNIX:
-	print "unix"
 	from unix import *
 elif os.name in WINDOWS:
-	print "windows"
 	from windows import *
 else:
-	print "Error!"
+	print 'Error!'

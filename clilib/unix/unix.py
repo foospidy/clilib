@@ -1,6 +1,7 @@
 from uname import *
 from rm import *
 from echo import *
+from whoami import *
 
 def man(command=None):
   if None == command or '' == command:

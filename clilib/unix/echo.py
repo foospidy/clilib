@@ -1,4 +1,4 @@
-def echo(params=None):
+def echo(*params):
 	"""
 	ECHO(1)                                                                    User Commands                                                                    ECHO(1)
 
@@ -75,11 +75,21 @@ GNU coreutils 8.23                                                           Mar
 	escape = False
 	
 	if None != params:
-		for param in shlex.split(params):
+		#for param in shlex.split(params):
+         for param in params:
 			if param in {'-e'}:
-				# this may not be needed, python escapes automatically
 				escape = True
 			else:
-				output = output + str(param)
+				# remove quotes if quoted
+				if param.startswith('"') and param.endswith('"'):
+					param = param[1:-1]
+				
+				if param.startswith("'") and param.endswith("'"):
+					param = param[1:-1]
+				
+				if escape:
+					output = output + str(param).decode('string_escape')
+				else:
+					output = output + str(param)
 
 	return output

@@ -1,4 +1,4 @@
-def uname(params=None):
+def uname(*params):
 	"""
 	UNAME(1)                         User Commands                        UNAME(1)
 
@@ -57,13 +57,11 @@ def uname(params=None):
 		This  is  free  software:  you  are free to change and redistribute it.
 		There is NO WARRANTY, to the extent permitted by law.
 	"""
-	import shlex
+	output = 'Linux'
 	
 	if None != params:
-		for param in shlex.split(params):
-			if param in {'-a', '--all'}:
-				return "Linux bitminer 3.16.0-4-amd64 #1 SMP Debian 3.16.7-ckt9-3~deb8u1 (2015-04-24) x86_64 GNU/Linux"
-			else:
-				return "Linux"
-	else:
-		return "Linux"
+		for param in params:
+			if param in ('-a', '--all'):
+				output = 'Linux bitminer 3.16.0-4-amd64 #1 SMP Debian 3.16.7-ckt9-3~deb8u1 (2015-04-24) x86_64 GNU/Linux'
+	
+	return output

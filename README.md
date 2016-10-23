@@ -11,7 +11,7 @@ clone this project or download and extract the latest version from: https://gith
 
 run: `python setup.py bdist_egg`
 
-then run: `sudo easy_install -Z dist/clilib-0.0.1-py2.egg`
+then run: `sudo easy_install -Z dist/clilib-0.0.1-py2.7.egg`
 
 ### Usage
 Import clilib into your script with `from clilib import *`

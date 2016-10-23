@@ -7,6 +7,7 @@ from cd import *
 from busybox import *
 from wget import *
 from sh import *
+from enable import *
 
 def man(command=None):
   if None == command or '' == command:

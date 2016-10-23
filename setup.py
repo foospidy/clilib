@@ -10,7 +10,7 @@ def package_files(directory):
 
     return paths
 
-extra_files = package_files('path_to/extra_files_dir')
+extra_files = package_files('clilib/')
 here        = os.path.abspath(os.path.dirname(__file__))
 
 with open(os.path.join(here, 'README.rst')) as f:

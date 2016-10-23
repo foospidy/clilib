@@ -18,7 +18,7 @@ with open(os.path.join(here, 'README.rst')) as f:
 
 setup(
     name = "clilib",
-    version = "0.0.0",
+    version = "0.0.1",
     author = "foospidy",
     author_email = "",
     description = ("Emulates command line commands"),

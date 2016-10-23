@@ -1,7 +1,17 @@
 import os
 from setuptools import setup
 
-here = os.path.abspath(os.path.dirname(__file__))
+
+def package_files(directory):
+    paths = []
+    for (path, directories, filenames) in os.walk(directory):
+        for filename in filenames:
+            paths.append(os.path.join('..', path, filename))
+
+    return paths
+
+extra_files = package_files('path_to/extra_files_dir')
+here        = os.path.abspath(os.path.dirname(__file__))
 
 with open(os.path.join(here, 'README.rst')) as f:
     long_desc = f.read()
@@ -17,6 +27,7 @@ setup(
     url = "https://github.com/foospidy/clilib",
     download_url = "",
     packages = ['clilib'],
+    package_data = {'': extra_files},
     long_description = long_desc,
     classifiers = [
         "Intended Audience :: Honeypots",

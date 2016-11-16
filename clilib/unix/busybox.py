@@ -1,15 +1,15 @@
-def busybox(params=None):
-    """
+def busybox(*params):
+	"""
 No manual entry for busybox
-    """
+	"""
 
-    output = ''
+	output = ''
 
-    if None != params:
-        for param in params:
+	if None != params:
+		for param in params:
 
-            # https://isc.sans.edu/diary/21543
-            if 'ECCHI':
-                output = 'ECCHI: applet not found'
+			#https://isc.sans.edu/diary/21543
+			if 'ECCHI' == param:
+				output = 'ECCHI: applet not found'
 
-    return output
+	return output

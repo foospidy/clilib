@@ -17,3 +17,10 @@ print rm()
 print "rm -rf somepath"
 print rm('/some/file/path')
 
+print tftp()
+
+print busybox('ECCHI')
+print busybox('thing')
+print busybox()
+
+print enable()

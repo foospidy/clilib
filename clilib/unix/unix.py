@@ -1,13 +1,15 @@
-from uname import *
-from rm import *
-from echo import *
-from whoami import *
-from which import *
-from cd import *
 from busybox import *
-from wget import *
-from sh import *
+from cd import *
+from echo import *
 from enable import *
+from rm import *
+from sh import *
+from tftp import *
+from uname import *
+from wget import *
+from which import *
+from whoami import *
+
 
 def man(command=None):
   if None == command or '' == command:
